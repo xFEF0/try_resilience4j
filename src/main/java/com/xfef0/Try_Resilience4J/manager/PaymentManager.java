@@ -1,6 +1,7 @@
 package com.xfef0.Try_Resilience4J.manager;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -8,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class PaymentManager implements IPaymentManager {
 
+    @Lazy
     private final RestTemplate restTemplate;
 
     @Override
